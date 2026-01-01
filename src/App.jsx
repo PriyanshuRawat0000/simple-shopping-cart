@@ -8,11 +8,13 @@ import usecart from "./hooks/usecart.js"
 
 function App() {
   
-  //const {addItem,updateItem,removeItem,cart,Total}=usecart();
+  const {addItem,updateItem,removeItem,cart,total}=usecart();
 
   return (
     <div className="app">
-      <header>Simple Shopping Cart</header>
+      <header>
+        <h1>Simple Shopping Cart</h1>
+      </header>
       <main className="products">
         <section>
          {
@@ -20,16 +22,16 @@ function App() {
             <Product 
             key={item.id} 
             product={item}
-            //onAddToCart={addItem}
+            onAddToCart={addItem}
             />
           ))
          }
         </section>
         <Cart
-          // cart={cart}
-          // updateToCart={updateItem}
-          // removeFromCart={removeItem}
-          // total={Total}
+          cart={cart}
+          updateToCart={updateItem}
+          removeFromCart={removeItem}
+          total={total}
         />
         
       </main>

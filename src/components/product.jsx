@@ -6,7 +6,7 @@ function product({product,onAddToCart}) {
       
         <h3>{product.name}</h3>
         <p>{product.price}</p>
-        <button onClick={onAddToCart(product.id)}>ADD</button>
+        <button onClick={()=>onAddToCart(product)}>ADD</button>
 
     </div>
   )
